@@ -17,4 +17,6 @@ script:
     - coverage run -m unittest tests.host_test
     - Rscript tests/testthat.R
 after_success:
-    - bash <(curl -s https://codecov.io/bash)
+    - bash <(curl -s https://codecov.io/bash) -cF python
+    - Rscript covr.R 
+    - bash <(curl -s https://codecov.io/bash) -cF R
