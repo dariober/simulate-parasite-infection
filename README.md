@@ -24,6 +24,8 @@ runApp('shiny') # <- Dir containing app.R
 Run tests
 =========
 
+See also `.travis.yml`
+
 ```
 python3 -m unittest tests.host_test
 Rscript tests/testthat.R
