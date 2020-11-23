@@ -33,7 +33,7 @@ cd simulate-parasite-infection
 ```
 conda create --yes -n simulate-parasite-infection
 conda activate simulate-parasite-infection
-mamba install -c conda-forge --yes --file requirements.txt
+conda install -c conda-forge --yes --file requirements.txt # Better: use mamba here instead of conda
 ```
 
 * To start the shiny app from an interactive R session:
