@@ -18,5 +18,5 @@ script:
     - Rscript tests/testthat.R
 after_success:
     - bash <(curl -s https://codecov.io/bash) -cF python
-    - Rscript covr.R 
+    - Rscript tests/covr.R 
     - bash <(curl -s https://codecov.io/bash) -cF R
