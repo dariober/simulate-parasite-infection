@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.com/dariober/simulate-parasite-infection.svg?branch=master)](https://travis-ci.com/dariober/simulate-parasite-infection)
+[![License](http://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dariober/simulate-parasite-infection)
+
 <!-- vim-markdown-toc GFM -->
 
 * [Start server locally](#start-server-locally)
