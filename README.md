@@ -4,7 +4,7 @@
 
 <!-- vim-markdown-toc GFM -->
 
-* [Start server locally](#start-server-locally)
+* [Installing the package and starting the Shiny app locally](#installing-the-package-and-starting-the-shiny-app-locally)
 * [Run tests](#run-tests)
 * [Deploy public](#deploy-public)
     * [Installation](#installation)
@@ -16,13 +16,42 @@
 We want to simulate the infection of Plasmodium parasites across generations.
 Parasites are either resistant or susceptible to a drug.
 
-Start server locally
+Installing the package and starting the Shiny app locally
 ====================
+
+* Download the source code and change directory there:
+
+```
+git clone https://github.com/dariober/simulate-parasite-infection
+cd simulate-parasite-infection
+```
+
+* File [requirements.txt](requirements.txt) lists the required components.
+  Install them manually or (better) via conda. Creating a dedicated conda
+  environment is not required but recommended
+
+```
+conda create --yes -n simulate-parasite-infection
+conda activate simulate-parasite-infection
+mamba install -c conda-forge --yes --file requirements.txt
+```
+
+* To start the shiny app from an interactive R session:
 
 ```
 library(shiny)
 options(browser= '/usr/bin/google-chrome')
 runApp('shiny') # <- Dir containing app.R
+```
+
+To get the path to your browser executed on the Unix shell:
+
+```
+which google-chrome
+# Or
+which firefox
+# Or
+which <your-browser>
 ```
 
 Run tests
