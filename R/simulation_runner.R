@@ -4,7 +4,7 @@ library(ggplot2)
 
 use_python(python= py_config()$python)
 
-eventBuilder <- function(event_str, max_events= 1000) {
+eventBuilder <- function(event_str, max_size= 1000) {
     EVENTS <- list(R= 'REPRODUCE', T= 'TREATMENT', M= 'MOSQUITO_BITE')
 
     x <- sub('^\\d+', '', event_str)
@@ -44,13 +44,13 @@ eventBuilder <- function(event_str, max_events= 1000) {
                 events_full <- events_full[1:(length(events_full) - 1)]
             }
             z <- as.numeric(z)
-            if(z > max_events) {
-                stop('Max number of events must be < %s', max_size)
+            if(z > max_size) {
+                stop(sprintf('Max number of events must be < %s', max_size))
             }
 
             events_full <- append(events_full, rep(prev_event, as.numeric(z)))
-            if(length(events_full) > max_events) {
-                stop('Max number of events must be < %s', max_size)
+            if(length(events_full) > max_size) {
+                stop(sprintf('Max number of events must be < %s', max_size))
             }
         }
     }
@@ -128,7 +128,7 @@ simulation_plotter <- function(history, cex_size= 2) {
         ylab('Parasites x1000') +
         xlab('Time point') +
         theme_classic() +
-        theme(legend.key.height= unit(1 * cex_size, 'cm'), text= element_text(size= 10 * cex_size))
+        theme(legend.position= 'none', text= element_text(size= 10 * cex_size))
     if('MOSQUITO_BITE' %in% history$event) {
         gg <- gg + geom_point(data= unique(history[event == 'MOSQUITO_BITE']), aes(x= time_point, y= 1), colour= 'black', pch= 24, fill= 'black', size= 3 * cex_size)
     }

@@ -54,6 +54,10 @@ which firefox
 which <your-browser>
 ```
 
+The browser should show something like this (after clicking on *Run simulation*)
+
+<img src="docs/screenshot.png" alt="Example screenshot" width="400" />
+
 Run tests
 =========
 

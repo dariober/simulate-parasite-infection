@@ -60,7 +60,7 @@ ui <- fluidPage(
                           value= "R20, T, RRR, T, RRR, T, RRR, T, RRR, M\nR20, T, RRR, T, RRR, T, RRR, T, RRR",
                           height= '10%',
                           resize= 'both',
-                          rows= 10),
+                          rows= 4),
 
             actionButton("run", "Run simulation")
         ),
