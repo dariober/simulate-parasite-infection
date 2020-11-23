@@ -6,4 +6,4 @@ r-data.table >=1.12.8
 r-ggplot2 >=3.3.2
 r-shiny >=1.5
 coverage >=5.3 # Only for testing
-r-covr =3.2.1
+r-covr >=3.5.1
